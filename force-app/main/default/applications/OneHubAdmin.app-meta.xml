@@ -4,18 +4,18 @@
     <description>OneHub Admin Interface</description>
     <label>OneHub Admin</label>
     <logo>Retail_Solution/OneHubLogo_png.png</logo>
-    <tabs>Location__c</tab>
-    <tabs>ProjectType__c</tab>
-    <tabs>Retailer__c</tab>
-    <tabs>RetailerService__c</tab>
-    <tabs>Certification__c</tab>
-    <tabs>Service__c</tab>
-    <tabs>Target__c</tab>
-    <tabs>Material__c</tab>
-    <tabs>Upload_Products</tab>
-    <tabs>standard-Account</tab>
-    <tabs>Cycle__c</tab>
-    <tabs>ScheduleOption__c</tab>
-    <tabs>ProjectTypeExecutionCompany__c</tab>
-    <tabs>Reports_analytics</tab>
+    <tabs>Location__c</tabs>
+    <tabs>ProjectType__c</tabs>
+    <tabs>Retailer__c</tabs>
+    <tabs>RetailerService__c</tabs>
+    <tabs>Certification__c</tabs>
+    <tabs>Service__c</tabs>
+    <tabs>Target__c</tabs>
+    <tabs>Material__c</tabs>
+    <tabs>Upload_Products</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>Cycle__c</tabs>
+    <tabs>ScheduleOption__c</tabs>
+    <tabs>ProjectTypeExecutionCompany__c</tabs>
+    <tabs>Reports_analytics</tabs>
 </CustomApplication>
