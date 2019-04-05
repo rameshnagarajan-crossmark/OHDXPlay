@@ -3,5 +3,5 @@
     <defaultLandingTab>standard-home</defaultLandingTab>
     <description>The rest APIs</description>
     <label>RestAPI</label>
-    <tab>Cycle__c</tab>
+    <tabs>Cycle__c</tab>
 </CustomApplication>

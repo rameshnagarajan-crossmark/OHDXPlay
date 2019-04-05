@@ -2,12 +2,12 @@
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <defaultLandingTab>standard-home</defaultLandingTab>
     <label>Sales Management</label>
-    <tab>standard-Account</tab>
-    <tab>standard-Forecasting3</tab>
-    <tab>standard-Dashboard</tab>
-    <tab>standard-Pricebook2</tab>
-    <tab>standard-Chatter</tab>
-    <tab>standard-Product2</tab>
-    <tab>Cycle__c</tab>
-    <tab>ServiceException__c</tab>
+    <tabs>standard-Account</tab>
+    <tabs>standard-Forecasting3</tab>
+    <tabs>standard-Dashboard</tab>
+    <tabs>standard-Pricebook2</tab>
+    <tabs>standard-Chatter</tab>
+    <tabs>standard-Product2</tab>
+    <tabs>Cycle__c</tab>
+    <tabs>ServiceException__c</tab>
 </CustomApplication>
