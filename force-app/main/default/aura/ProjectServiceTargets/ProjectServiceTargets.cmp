@@ -1,0 +1,98 @@
+<aura:component extends="c:UISecurity" controller="LightningProjectServiceTargetsController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    <ltng:require styles="{!$Resource.font_awesome + '/font-awesome/css/font-awesome.min.css'}" />
+    <ltng:require styles="{!$Resource.oh_tools + '/oh-tools-style.css'}" />
+ 	<aura:attribute name="recordId" type="Id" />  
+    <aura:attribute name="projectId" type="Id" />  
+    <aura:attribute name="service" type="Object" />
+    <aura:attribute name="mapTargets" type="List" default="[]"/>
+    <aura:attribute name="targets" type="List" default="[]"/> 
+    <aura:attribute name="targetsKeys" type="List" default="[]"/> 
+    <aura:attribute name="primaryTargets" type="List" default="[]"/> 
+    <aura:attribute name="secondaryTargets" type="List" default="[]"/> 
+    <aura:attribute name="activeSections" type="List" default="[]" />
+      <aura:attribute name="activeSectionsMessage" type="String" default="" />
+    <aura:attribute name="ingredientTargets" type="List" default="[]"/> 
+    <aura:attribute name="reportingTargets" type="List" default="[]"/> 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler action="{!c.onTargetsChanged}" event="c:ProjectServiceTargetChange" />
+   
+    <aura:handler name="messageBoxEvent" event="c:SimpleComponentEvent" action="{!c.onMessageBoxEvent}"/>
+    <c:MessageBox aura:id="messageBox"/>
+    <div class="slds-is-relative slds-size_1-of-1 pad-right slds-grid" style="overflow:hidden;">
+        <c:Notification aura:id="ProjectServiceTargetNotification" class="no-flow"/>
+
+        <div class="slds-card slds-size_8-of-12 slds-p-around_medium" style="margin-right:12px;">  
+            <div class=""  aura:id="projectTargetSpinner" >
+                <lightning:spinner size="medium" variant="brand" />
+            </div> 
+            <div class="slds-m-bottom_small">
+                <c:SectionHeaderProject Title="Service Targets" iconClass="fa-bullseye" />
+            </div>  
+                <p>Review and select the targets required for this service</p>       
+            <section class="slds-p-horizontal_small">
+            </section>
+            <section class="slds-m-around_small">
+                <div aura:id="ProjectTarget__c.Add" class="hide">
+                    <button class="slds-box oh-plus-button" onclick="{!c.openAddTargetModal}">
+                        <span class="slds-media slds-p-horizontal_small" >
+                            <span class="slds-grid slds-grid_align-center oh-plus-text">+</span>
+                        </span>
+                    </button>
+                </div>
+            </section>
+            <section class="slds-clearfix slds-m-bottom_medium">
+                <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-end slds-m-top_x-small">
+                    <p>
+                        Total targets added: {!v.targets.length}
+                    </p>
+                    <span aura:id="ProjectTarget__c.Add" >
+                        <lightning:button label="Remove All" iconName="utility:dash" variant="destructive" class="slds-m-right--small" onclick="{!c.onClickRemoveAll}"/>
+                    </span>
+                </div>
+            </section>
+            <!--
+            <aura:iteration items="{!v.targets}" var="target">
+                <div>
+                    <c:ProjectServiceTargetsCard projectServiceTarget="{!target}"   />
+                </div>
+            </aura:iteration>-->
+           
+            <aura:if isTrue="{!v.targets.length > 0}" >
+                <lightning:accordion ><!--allowMultipleSectionsOpen="true"
+                                     onsectiontoggle="{! c.handleSectionToggle }"
+        activeSectionName="{! v.mapTargets[0].TargetUse }"-->
+                <aura:iteration items="{!v.mapTargets}" var="maptargetKey" indexVar="index">             
+                   <lightning:accordionSection name="{!maptargetKey}" label="{!maptargetKey}">
+                          <aura:set attribute="body">
+                      
+                         <div class="slds-grid slds-wrap" style="width:100%;align-items:stretch;">
+                              <aura:iteration items="{!v.targets}" var="target">
+                                 
+                                <aura:if isTrue="{!target.TargetUse == maptargetKey }" >
+                                <div class="slds-p-around_small">
+                                  <c:ProjectServiceTargetsCard projectServiceTarget="{!target}"   /> 
+                                </div>
+                                </aura:if>
+                                 
+                             </aura:iteration>
+                        </div>
+                       </aura:set>
+                       </lightning:accordionSection>
+                   
+                   
+                </aura:iteration>
+                     </lightning:accordion>
+                </aura:if>
+            
+        </div>
+        <div class="slds-size_4-of-12 slds-card slds-p-around_medium" style="margin-top:0;">
+            <div class="slds-p-bottom_medium">
+                <c:SectionHeaderProject Title="Chatter" iconClass="fa-commenting-o" />
+            </div>
+            <div class="slds-p-horizontal_small">
+                <forceChatter:publisher context="RECORD" recordId="{!v.projectId}" />
+                <forceChatter:feed type="Record" subjectId="{!v.projectId}"/>
+            </div>
+        </div>          
+    </div>
+</aura:component>

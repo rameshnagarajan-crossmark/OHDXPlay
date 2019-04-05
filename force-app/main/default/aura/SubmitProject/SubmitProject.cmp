@@ -1,0 +1,20 @@
+<aura:component controller="LightningProjectController" implements="force:lightningQuickActionWithoutHeader,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="project" type="Object" access="global" />
+    <aura:registerEvent name="refreshProject" type="c:EventProjectRefresh"/>
+    <aura:handler event="c:EventHideModal" action="{!c.hideModalWindow}" />
+    <aura:attribute name="vfURL" type="String"/>
+    <aura:attribute name="reloadPage" type="Boolean" default="false"/>
+    <div>
+    <div class="oh-outer-container">
+        <h2 id="title" class="slds-text-heading_medium slds-text-align_center">Submit Project</h2>    
+        <hr class="slds-m-vertical_small"/>
+            <div class="slds-grid slds-size_1-of-1 slds-grid_align-end">
+                <ui:button class="slds-button slds-button_brand slds-hidden slds-m-bottom_small" press="{!c.submitProject}" aura:id="Submit" label="Submit Project"/>
+            </div>
+    	<iframe aura:id="vfFrame" id="vfResize" class="oh-iframe-container" frameborder="0" scrolling="no" src="{!v.vfURL}" />    <!-- style="width:100%;min-height:700px;height:auto;border:0;outline:0;" -->  
+    	<hr class="slds-m-vertical_x-small"/>
+    </div>	
+    </div>
+</aura:component>

@@ -1,0 +1,64 @@
+.THIS .oh-plus-button {
+    background-color:#fff; 
+    padding:1rem; 
+    width:100%;
+    font-size:3rem; width:100%; line-height:1.5rem; vertical-align:middle;
+    outline: 0;
+    text-align:center; 
+    color:#4BCA81;
+    border: 1px solid #4BCA81;
+}
+.THIS .oh-plus-button:hover {
+    color: #04844b;
+    border-color: #04844b;
+    background-color:#FFF;
+}
+.THIS .oh-plus-text {
+    width: 100%;
+    text-align: center;
+}
+/*
+.THIS .hiddenSize {
+    max-height:0rem;
+    height:0;
+    overflow:hidden;
+    transition:all .5s ease;
+
+}
+
+.THIS .expandedSize {
+    max-height:1000px;
+    height:100%;
+    transition:all .9s ease;
+}*/
+
+.THIS .slds-accordion__section {
+    border-radius: .25rem;
+    border: 1px solid rgb(221, 219, 218);
+    margin-bottom:.6rem;
+}
+
+.THIS .slds-accordion__summary-action {
+    
+}
+
+.THIS .slds-accordion__list-item {
+    border-top: none;
+}
+
+.THIS .hiddenSize {
+    display:none;
+}
+.THIS .expandedSize {
+    display:block;
+}
+
+.THIS i.fa-chevron-right {
+    color:#16325C;
+    transition:all .2s ease;
+}
+
+.THIS .rotate {
+    transform:rotate(90deg);
+    transition:all .2s ease;
+}
