@@ -483,4 +483,11 @@ global class AppUtil {
         return   contacts.size() > 0 ? String.valueOf(contacts[0].AccountId) : '';
     }
 
+    public static String getHelloworld() {
+
+        String returnstring = 'Hello World';
+        return returnstring;
+
+    }
+
 }

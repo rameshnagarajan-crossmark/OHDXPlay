@@ -4,6 +4,7 @@
     <aura:attribute type="String" name="callbackresult" default="NONE"></aura:attribute>
     <aura:attribute type="String" name="callbackmessage"></aura:attribute>
     <aura:registerEvent name="refreshProject" type="c:EventProjectRefresh"/>    
+    <aura:attribute type="String" name="test" default="Awesome"></aura:attribute>
     
     <div style="height:100%;min-height:210px;display:flex;flex-direction:column;width:100%;position:relative;">
         <div><lightning:spinner size="medium" variant="brand" aura:id="spinner" class="oh-margin slds-hide"/></div> 
