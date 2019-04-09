@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>ProjectDashboard</defaultLandingTab>
+    <description>OneHub Application</description>
+    <label>OneHub</label>
+    <logo>Retail_Solution/OneHubLogo_png.png</logo>
+    <tab>standard-Opportunity</tab>
+    <tab>standard-Account</tab>
+    <tab>standard-Contact</tab>
+    <tab>ProjectDashboard</tab>
+    <tab>OneHub_Reports</tab>
+    <tab>standard-report</tab>
+    <tab>Cycle__c</tab>
+    <tab>Program__c</tab>
+    <tab>Reports_analytics</tab>
+</CustomApplication>

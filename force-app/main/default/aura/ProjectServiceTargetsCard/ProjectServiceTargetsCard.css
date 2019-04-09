@@ -1,0 +1,71 @@
+.THIS .oh-card-title {
+    font-weight:300; 
+    font-size:.875rem; 
+    color:#0070D2;
+  }
+
+.THIS.delete {
+    padding: 0;
+    border:1px transparent #FFF;
+    opacity:0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding .3s ease-in-out, opacity 1s ease-in-out; 
+}
+/*
+.THIS .slds-grid .slds-item {
+    width:30%;
+}*/
+
+.THIS .delete-button {
+    z-index: 5;
+  	position:absolute;
+    top: 0;
+    right: 0;    
+}
+
+
+.THIS .oh-close {
+    opacity:1;
+    overflow:visible;
+    max-height: 400px;
+    transition: all 0.4s ease-in-out;
+    
+}
+
+.THIS .oh-icon-button {
+    border:0;
+    box-shadow:0;
+    outline:0;
+    background-color:transparent;
+}
+
+.THIS .slds-item {
+	margin-right:.5rem;
+    margin-left:.25rem;
+}
+
+.THIS .img-container {
+    vertical-align:middle;
+    text-align:center;
+    font-size:3rem;
+    line-height:3rem;
+    min-width:60px;
+    width:100px;
+    max-width:100px;
+    max-height: 60px;
+    overflow: hidden;
+    height:100%;
+    color:grey;
+}
+
+.THIS .slds-box {
+    min-height:185px;
+}
+
+.THIS {
+    align-items:stretch;
+    max-width:300px;
+    width:300px;
+    min-width:250px;
+}
