@@ -14,3 +14,12 @@ jobs:
       - run:
           name: Deploy to Org
           command: . build/deploy-org.sh
+workflows:
+  version: 2
+  validate:
+    jobs:
+      - deploy-org:
+          filters:
+            branches:
+              ignore:
+                - master          
