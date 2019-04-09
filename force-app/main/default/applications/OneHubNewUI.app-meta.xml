@@ -3,8 +3,8 @@
     <defaultLandingTab>standard-home</defaultLandingTab>
     <label>OneHub New UI</label>
     <logo>Retail_Solution/OneHubLogo_png.png</logo>
-    <tab>Get_the_Picture</tab>
-    <tab>FulfillmentCenter__c</tab>
-    <tab>Cycle__c</tab>
-    <tab>ScheduleOption__c</tab>
+    <tabs>>Get_the_Picture</tabs>
+    <tabs>>FulfillmentCenter__c</tabs>
+    <tabs>>Cycle__c</tabs>
+    <tabs>>ScheduleOption__c</tabs>
 </CustomApplication>

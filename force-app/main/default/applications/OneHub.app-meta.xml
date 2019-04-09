@@ -4,13 +4,13 @@
     <description>OneHub Application</description>
     <label>OneHub</label>
     <logo>Retail_Solution/OneHubLogo_png.png</logo>
-    <tab>standard-Opportunity</tab>
-    <tab>standard-Account</tab>
-    <tab>standard-Contact</tab>
-    <tab>ProjectDashboard</tab>
-    <tab>OneHub_Reports</tab>
-    <tab>standard-report</tab>
-    <tab>Cycle__c</tab>
-    <tab>Program__c</tab>
-    <tab>Reports_analytics</tab>
+    <tabs>>standard-Opportunity</tabs>
+    <tabs>>standard-Account</tabs>
+    <tabs>>standard-Contact</tabs>
+    <tabs>>ProjectDashboard</tabs>
+    <tabs>>OneHub_Reports</tabs>
+    <tabs>>standard-report</tabs>
+    <tabs>>Cycle__c</tabs>
+    <tabs>>Program__c</tabs>
+    <tabs>>Reports_analytics</tabs>
 </CustomApplication>
